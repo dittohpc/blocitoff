@@ -1,0 +1,7 @@
+<h1>Welcome to Blocitoff</h1>
+<p>The place where todo lists are easy</p>
+
+<% if user_signed_in? %>
+ <%= link_to 'Sign Out', destroy_user_session_path, method:
+:delete %>
+<% end %>

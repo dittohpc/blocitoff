@@ -1,0 +1,8 @@
+<h2 class='profile_name'><%= "Profile for: #{current_user.email}."%></h2>
+
+<div class='details'><%= "# Logins: #{current_user.sign_in_count}"%></div>
+<div class='details'><%= "Created On: #{current_user.created_at.strftime('%F at %r')}"%></div>
+<div class='details'><%= "Updated On: #{current_user.updated_at.strftime('%F at %r')}"%></div>
+
+<div class='details'><%= "Recent Login: #{current_user.current_sign_in_at.strftime('%F at %r')}"%></div>
+<div class='details'><%= "Prior Login: #{current_user.updated_at.strftime('%F at %r')}"%></div>

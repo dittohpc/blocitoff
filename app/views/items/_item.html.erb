@@ -1,7 +1,8 @@
+
 <div id=<%="item-#{item.id}"%>>
   <div class="media">
-    <div class="media-body">
-      <p class='item-name'><%= item.name %> <%= link_to "Complete", [current_user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true  %> </p>
-    </div>
+     <div class="media-body">
+       <p class='item-name'><%= item.name %> <%= link_to "", [current_user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true  %> </p>
+     </div>
   </div>
 </div>

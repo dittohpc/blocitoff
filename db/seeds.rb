@@ -10,7 +10,7 @@ users = User.all
 200.times do
   Item.create!(
     name: Faker::Hipster.sentence,
-    user_id: Faker::Number.between(1, 52)
+    user_id: users.sample
   )
 end
 

@@ -1,8 +1,20 @@
-<h2 class='profile_name'><%= "Profile for: #{current_user.email}."%></h2>
-
+<h1 class='list-title'><%= "#{@user.email}'s To-Do list."%></h1>
 <div class='details'><%= "# Logins: #{current_user.sign_in_count}"%></div>
 <div class='details'><%= "Created On: #{current_user.created_at.strftime('%F at %r')}"%></div>
 <div class='details'><%= "Updated On: #{current_user.updated_at.strftime('%F at %r')}"%></div>
 
 <div class='details'><%= "Recent Login: #{current_user.current_sign_in_at.strftime('%F at %r')}"%></div>
 <div class='details'><%= "Prior Login: #{current_user.updated_at.strftime('%F at %r')}"%></div>
+
+<div class='row'>
+  <div class='col-md-8'>
+    <div class='new-item'>
+      <%= render partial: 'items/form', locals: {user: @user} %>
+    </div>
+  </div>
+  <div id="items" class='col-md-8'>
+    <div class='js-items'>
+      <%= render @items %>
+    </div>
+  </div>
+</div>

@@ -3,6 +3,7 @@
   <div class="media">
      <div class="media-body">
        <p class='item-name'><%= item.name %> <%= link_to "", [current_user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true  %> </p>
+       <p class='item-age'>The above ITEM is <%= distance_of_time_in_words(item.created_at,Time.now, include_seconds: true) %> old</p>
      </div>
   </div>
 </div>
